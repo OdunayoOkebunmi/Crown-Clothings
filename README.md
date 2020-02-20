@@ -1,20 +1,57 @@
-## Lesson-1
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+ 
+# CROWN-CLOTHING
 
-In this lesson, we are exploring how to use Create React App. We are leveraging it to help us bootstrap our application and handle the webpack configuration. 
-
-# How to fork and clone
-
-One quick note about cloning this project. If you wish to make commits and push the code up after cloning this repo, you should fork the project first. In order to own your own copy of this repository, you have to fork it so you get your own copy on your own profile!
-
-You can see the fork button in the top right corner of every GitHub project; click it and a copy of the project will be added to your GitHub profile under the same name as the original project.
-
-![alt text](https://i.ibb.co/1YN7SJ6/Screen-Shot-2019-07-01-at-2-02-40-AM.png "image to fork button")
-
-After forking the project, simply clone it the way you would from the new forked project in your own GitHub repository and you can commit and push to it freely!
+> Crown-Clothing is an online marketplace for fashion items.
 
 
-# After you fork and clone:
+## Table of Content
+ * [Getting Started](#getting-started)
+ 
+ * [Installation](#installation)
 
-## Install dependencies
+ * [Test](#test)
+ 
 
-In your terminal after you clone your project down, remember to run either `yarn` or `npm install` to build all the dependencies in the project.
+ * [Linting Style](#linting-style)
+ 
+ * [Built With](#built-with)
+ 
+ * [Author](#author)
+
+
+## Getting Started
+
+### Installation
+1. Clone this repository into your local machine:
+```
+e.g git clone https://github.com/OdunayoOkebunmi/Crown-Clothings
+```
+2. Install dependencies 
+```
+e.g npm install
+```
+3. Start the application by running the dev-server script.
+
+```
+e.g npm run start
+```
+
+### Test
+run test using ```npm test```.
+
+### Linting Style
+* ESLint with Airbnb style guide. 
+
+
+## Built With
+* ReactJS
+* Redux
+* Firebase
+* Stripe
+
+## Author
+*  [Odunayo Olajumoke Okebunmi](https://twitter.com/OdunayoO_)
+
+## License
+This project is licensed under the MIT license - see the LICENSE.md file for details.
