@@ -28,7 +28,7 @@ const CheckoutPage = ({ cartItems, total }) => (
     {
       cartItems.map(cartItem => (<CheckoutItem key={ cartItem.id } cartItem={ cartItem } />))
     }
-    {/* <span>₦{ total }</span> */ }
+    <div className='total'>TOTAL: ₦{ total }</div>
   </div>
 )
 const mapStateToProps = createStructuredSelector({
