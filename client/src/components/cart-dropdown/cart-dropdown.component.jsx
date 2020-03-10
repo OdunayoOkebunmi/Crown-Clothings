@@ -6,20 +6,26 @@ import { selectCartItems } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { toggleCartHidden } from '../../redux/cart/cart.actions';
 import CartItem from '../cart-item/cart-item.component'
-import CustomButton from '../custom-button/custom-button.component';
-import './cart-dropdown.styles.scss';
+import {
+  CartDropdownContainer,
+  CartDropdownButton,
+  EmptyMessageContainer,
+  CartItemsContainer
+} from './cart-dropdown.styles';
 
 const CartDropdown = ({ cartItems, history, dispatch, user }) => (
-  <div className="cart-dropdown">
-    <div className="cart-items">
-      {
-        cartItems.length ? (cartItems.map(cartItem => <CartItem key={ cartItem.id } item={ cartItem } />)) : <span className='empty-message'>You have no item(s) in cart</span>
-
-      }
-
-    </div>
+  <CartDropdownContainer>
+    <CartItemsContainer>
+      { cartItems.length ? (
+        cartItems.map(cartItem => (
+          <CartItem key={ cartItem.id } item={ cartItem } />
+        ))
+      ) : (
+          <EmptyMessageContainer>Your cart is empty</EmptyMessageContainer>
+        ) }
+    </CartItemsContainer>
     {
-      user ? (<CustomButton
+      user ? (<CartDropdownButton
         onClick={
           () => {
             history.push('/checkout')
@@ -28,7 +34,7 @@ const CartDropdown = ({ cartItems, history, dispatch, user }) => (
         }
       >
         GO TO CHECKOUT
-      </CustomButton>) : (<CustomButton
+      </CartDropdownButton>) : (<CartDropdownButton
           onClick={
             () => {
               history.push('/signin')
@@ -37,11 +43,10 @@ const CartDropdown = ({ cartItems, history, dispatch, user }) => (
           }
         >
           GO TO CHECKOUT
-      </CustomButton>)
+      </CartDropdownButton>)
     }
+  </CartDropdownContainer>
 
-
-  </div >
 )
 const mapStateToProps = createStructuredSelector({
   cartItems: selectCartItems,
