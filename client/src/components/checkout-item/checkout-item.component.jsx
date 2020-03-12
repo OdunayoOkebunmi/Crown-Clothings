@@ -23,7 +23,7 @@ const CheckoutItem = ({ cartItem, clearItemFromCart, removeCartItem, addCartItem
         <span>{ quantity }</span>
         <div onClick={ () => addCartItem(cartItem) }>&#10095;</div>
       </QuantityContainer>
-      <TextContainer>{ price }</TextContainer>
+      <TextContainer>₦{ price }</TextContainer>
       <RemoveButtonContainer onClick={ () => clearItemFromCart(cartItem) }>
         &#10005;
       </RemoveButtonContainer>
