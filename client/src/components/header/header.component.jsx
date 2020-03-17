@@ -1,15 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { ReactComponent as Logo } from '../../assets/crown.svg';
 import { createStructuredSelector } from 'reselect';
-import { selectCartHidden } from '../../redux/cart/cart.selectors'
-import { selectCurrentUser } from '../../redux/user/user.selectors'
+
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
+
+import { selectCartHidden } from '../../redux/cart/cart.selectors'
+import { selectCurrentUser } from '../../redux/user/user.selectors'
+
 import { OptionLink, HeaderContainer, OptionsContainer, LogoContainer } from './header.styles';
 import { signOutStart } from '../../redux/user/user.action';
 
-const Header = ({ currentUser, isHidden, signOutStart }) => (
+import { ReactComponent as Logo } from '../../assets/crown.svg';
+
+export const Header = ({ currentUser, isHidden, signOutStart }) => (
   <HeaderContainer>
     <LogoContainer to='/'>
       <Logo className='logo' />
