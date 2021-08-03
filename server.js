@@ -5,6 +5,8 @@ const path = require('path');
 const compression = require('compression');
 const enforce = require('express-sslify');
 
+console.log("made some changes")
+
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
