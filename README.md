@@ -51,8 +51,5 @@ run test using ```npm test```.
 * Stripe
 * NodeJS
 
-## Author
-*  [Odunayo Olajumoke Okebunmi](https://twitter.com/OdunayoO_)
-
 ## License
 This project is licensed under the MIT license - see the LICENSE.md file for details.
